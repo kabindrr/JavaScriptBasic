@@ -401,18 +401,18 @@ const fruits = ["apple", "pineapple", "banana", "mango"];
 
 // Read the data from object
 
-const person = {
-  name: "sam Smith",
-  phone: 2345678,
-  address: "Sydney",
-  isMarried: true,
-  hasPet: undefined,
-  gender: null,
-  skills: ["html", "css", "javascript"],
-  bio: () => {
-    return "Hi there";
-  },
-};
+// const person = {
+//   name: "sam Smith",
+//   phone: 2345678,
+//   address: "Sydney",
+//   isMarried: true,
+//   hasPet: undefined,
+//   gender: null,
+//   skills: ["html", "css", "javascript"],
+//   bio: () => {
+//     return "Hi there";
+//   },
+// };
 // const data = person.name;
 // console.log(data);
 
@@ -437,25 +437,99 @@ const person = {
 // const { name, phone, address } = person;
 // console.log(phone);
 
-const { phone, address, ...properties } = person;
-// console.log(name);
+// const { phone, address, ...properties } = person;
+// // console.log(name);
+// // console.log(phone);
+// // console.log(skills);
+// console.log(properties);
 // console.log(phone);
-// console.log(skills);
-console.log(properties);
-console.log(phone);
-console.log(address);
-console.log(properties);
+// console.log(address);
+// console.log(properties);
 
-const career = {
-  title: "Full Stack Engineer",
-  salary: "200k",
-  location: "Sydney",
-};
+// const career = {
+//   title: "Full Stack Engineer",
+//   salary: "200k",
+//   location: "Sydney",
+// };
 
-const combo = { career };
+// const combo = { career };
+// // console.log(combo);
+// const combo2 = { ...career };
 // console.log(combo);
-const combo2 = { ...career };
-console.log(combo);
-console.log(combo2);
-const combo3 = { ...career, ...person };
-console.log(combo3);
+// console.log(combo2);
+// const combo3 = { ...career, ...person };
+// console.log(combo3);
+
+// Date Manuplation in JavaScript
+
+// const today = new Date();
+// console.log(today);
+
+// console.log(typeof today);
+
+// const today = new Date();
+// // const data = today.getDay();
+// // console.log(data);
+// const data = today.toISOString();
+// // const data = today.toLocaleDateString();
+// console.log(data);
+
+// today.setDate(today.getDate() + 10);
+// console.log(today);
+
+// Date Challange
+
+// Create a function that Takes food and the expire date and returns on of the followings.
+
+// const checkExp = () => {
+//   // food expired
+//   // //food not expired
+// };
+
+// //1// If expired ab is expired 4 days ago
+
+// //2// If not expired you have 10 days to use this product....
+
+// const foods = [
+//   {
+//     name: "Tuna",
+//     exp: "2024-04-28",
+//   },
+//   {
+//     name: "Milk",
+//     exp: "2024-02-02",
+//   },
+// ];
+
+// foods.map((food, i) => {
+//   console.log(foods);
+// // });
+// const milliSecPerDay = 24 * 60 * 60 * 1000;
+// const checkExp = (name, exp) => {
+//   const today = Date.now();
+//   const expDate = new Date(exp).getTime();
+
+//   const expiaryDate = Math.floor((expDate - today) / milliSecPerDay);
+//   if (expiaryDate < 1) {
+//     return `${name} is expired ${expiaryDate} days ago`;
+//   } else {
+//     return ` You have ${expiaryDate} to use ${name} this product`;
+//   }
+// };
+
+// const foods = [
+//   {
+//     name: "Tuna",
+//     exp: "2024-04-28",
+//   },
+//   {
+//     name: "milk",
+//     exp: "2024-05-13",
+//   },
+// ];
+
+// foods.map((food) => {
+//   // console.log(food, i);
+
+//   const result = checkExp(food);
+// });
