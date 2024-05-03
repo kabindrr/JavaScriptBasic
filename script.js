@@ -533,3 +533,91 @@ const fruits = ["apple", "pineapple", "banana", "mango"];
 
 //   const result = checkExp(food);
 // });
+
+// function sayHi(name, address) {
+//   const helloWorld = `Hello There from here, its me ${name}, I live in ${address}`;
+//   // "Hello there from here its me " + name + " I live in " + address;
+//   console.log(helloWorld);
+// }
+// sayHi("kabindra", "Sydney");
+// sayHi("sam", "USA");
+
+//Functions using ES6 and onwards
+
+// const sayHi = (name, address) => {
+//   const helloWorld = `My name is ${name}, I live in ${address}`;
+//   console.log(helloWorld);
+// };
+
+// const wwweBio = () => {};
+
+// const userList = [
+//   {
+//     name: "Kabindra",
+//     location: "Sydney",
+//     career: "Full Stack Developer",
+//     interest: "coding and travelling",
+//   },
+//   {
+//     name: "Sam",
+//     location: "London",
+//     career: "Software Engineer",
+//     interest: "Coding and Soccor",
+//   },
+//   {
+//     name: "San",
+//     location: "USA",
+//     career: "System Engineer",
+//     interest: "Coding and travel",
+//   },
+// ];
+// console.log(userList);
+
+// const personBio = ({ name, location, career, interest }) => {
+//   // const { name, location } = person;
+
+//   const helloWorld = `Hellow World, My name is ${name}, I live in ${location}, I would like a career in ${career} and I have interest in ${interest}`;
+//   return helloWorld;
+// };
+
+// userList.forEach((item, i) => {
+//   const data = personBio(item);
+//   console.log(data);
+// });
+
+const userList = [
+  {
+    name: "Kabindra",
+    location: "Sydney",
+    interest: "work on Projects",
+    career: "Full stack development",
+  },
+  {
+    name: "Sam",
+    location: "London",
+    interest: "soccor",
+    career: "Software engineering",
+  },
+  { name: "Bipin", location: "USA", interest: "Music" },
+];
+const personBio = ({ name, location, interest, ...rest }) => {
+  const str = `Hello My name is  ${name}, I live in ${location} and i would like a career in ${interest}`;
+  const job = ({ interest, career }) => {
+    return `I would like a career in ${rest} `;
+  };
+
+  if (rest.job) {
+    str += job(rest);
+  }
+
+  return str;
+};
+
+const personCareer = () => {
+  return ` I would like a career in   `;
+};
+
+userList.forEach((item, i) => {
+  const data = personBio(item);
+  console.log(data);
+});
