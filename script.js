@@ -585,39 +585,82 @@ const fruits = ["apple", "pineapple", "banana", "mango"];
 //   console.log(data);
 // });
 
-const userList = [
-  {
-    name: "Kabindra",
-    location: "Sydney",
-    interest: "work on Projects",
-    career: "Full stack development",
-  },
-  {
-    name: "Sam",
-    location: "London",
-    interest: "soccor",
-    career: "Software engineering",
-  },
-  { name: "Bipin", location: "USA", interest: "Music" },
-];
-const personBio = ({ name, location, interest, ...rest }) => {
-  const str = `Hello My name is  ${name}, I live in ${location} and i would like a career in ${interest}`;
-  const job = ({ interest, career }) => {
-    return `I would like a career in ${rest} `;
-  };
+// const userList = [
+//   {
+//     name: "Kabindra",
+//     location: "Sydney",
+//     interest: "work on Projects",
+//     career: "Full stack development",
+//   },
+//   {
+//     name: "Sam",
+//     location: "London",
+//     interest: "soccor",
+//     career: "Software engineering",
+//   },
+//   { name: "Bipin", location: "USA", interest: "Music" },
+// ];
+// const personBio = ({ name, location, interest, ...rest }) => {
+//   const str = `Hello My name is  ${name}, I live in ${location} and i would like a career in ${interest}`;
+//   const job = ({ interest, career }) => {
+//     return `I would like a career in ${rest} `;
+//   };
 
-  if (rest.job) {
-    str += job(rest);
-  }
+//   if (rest.job) {
+//     str += job(rest);
+//   }
 
-  return str;
+//   return str;
+// };
+
+// const personCareer = () => {
+//   return ` I would like a career in   `;
+// };
+
+// userList.forEach((item, i) => {
+//   const data = personBio(item);
+//   console.log(data);
+// });
+
+///set Time out
+
+// console.log("I am before the set time ondurationchange");
+
+// setTimeout(() => {
+//   console.log("I am inside the setTimeout");
+// }, 2000);
+
+// let counter = 100;
+// const countDown = setInterval(() => {
+//   console.log("From inside specialEvent", counter--);
+
+//   if (counter === 0) {
+//     clearInterval(countDown);
+//     console.log("Happy Birthday");
+//   }
+// }, 100);
+
+//// Fun challange
+const yoyo = () => console.log("0. " + (5 + 6));
+
+console.log("1. log");
+setTimeout(() => {
+  console.log("5. inside second set timeout");
+}, 1000);
+setTimeout(() => {
+  console.log("2. inside frist set timeout");
+}, 5000);
+
+console.log("3. after first setTime out");
+
+const sayHey = () => {
+  console.log("4. inside sayhey");
+  yoyo();
 };
 
-const personCareer = () => {
-  return ` I would like a career in   `;
-};
+sayHey();
 
-userList.forEach((item, i) => {
-  const data = personBio(item);
-  console.log(data);
-});
+console.log("6. last clg");
+setTimeout(() => {
+  console.log("7. inside third set timeout");
+}, 5000);
