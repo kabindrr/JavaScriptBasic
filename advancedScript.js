@@ -28,9 +28,40 @@ console.log("Advanced Scripting Concepts");
 // }
 // f();
 
-for (let i = 0; i < 5; i++) {
-  function print() {
-    console.log(i);
-  }
-  print();
+// for (let i = 0; i < 5; i++) {
+//   function print() {
+//     console.log(i);
+//   }
+//   print();
+// }
+
+//Object
+
+// const person = {
+//   name: "Kabindra",
+//   age: "30",
+//   profession: "Full stack Developer",
+//   address: "Sydney",
+
+//   bio() {
+//     return `Hey this is ${this.name}, and ${this.name} lives in ${this.address}`;
+//   },
+// };
+// console.log(person.bio());
+
+//Factiory Function Methods
+
+function aboutPerson(name, add) {
+  return {
+    name,
+    add,
+    bio() {
+      return `My name is ${this.name} and ${this.name} lives in ${this.add} `;
+    },
+  };
 }
+const kabiBio = aboutPerson("Kabindra", "Sydney");
+console.log(kabiBio.bio());
+
+const premBio = aboutPerson("Prem", "Uk");
+console.log(premBio.bio());
