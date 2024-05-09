@@ -641,26 +641,26 @@ const fruits = ["apple", "pineapple", "banana", "mango"];
 // }, 100);
 
 //// Fun challange
-const yoyo = () => console.log("0. " + (5 + 6));
+// const yoyo = () => console.log("0. " + (5 + 6));
 
-console.log("1. log");
-setTimeout(() => {
-  console.log("5. inside second set timeout");
-}, 1000);
-setTimeout(() => {
-  console.log("2. inside frist set timeout");
-}, 5000);
+// console.log("1. log");
+// setTimeout(() => {
+//   console.log("5. inside second set timeout");
+// }, 1000);
+// setTimeout(() => {
+//   console.log("2. inside frist set timeout");
+// }, 5000);
 
-console.log("3. after first setTime out");
+// console.log("3. after first setTime out");
 
-const sayHey = () => {
-  console.log("4. inside sayhey");
-  yoyo();
-};
+// const sayHey = () => {
+//   console.log("4. inside sayhey");
+//   yoyo();
+// };
 
-sayHey();
+// sayHey();
 
-console.log("6. last clg");
-setTimeout(() => {
-  console.log("7. inside third set timeout");
-}, 5000);
+// console.log("6. last clg");
+// setTimeout(() => {
+//   console.log("7. inside third set timeout");
+// }, 5000);
