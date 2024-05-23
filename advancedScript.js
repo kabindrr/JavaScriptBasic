@@ -86,5 +86,18 @@ console.log("Advanced Scripting Concepts");
 // This KeyWord Use Cases
 // Global Context
 
-console.log(window, this);
-console.log(window === this);
+// console.log(window, this);
+// console.log(window === this);
+
+//Functional Programming
+
+const person = Object.freeze({
+  name: "Prem",
+  career: "Dented Code",
+});
+
+person.name = "Sam";
+console.log(person);
+
+const newP = { ...person, name: "kabi" };
+console.log(person, newP);
